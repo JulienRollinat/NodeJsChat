@@ -1,0 +1,35 @@
+body {
+    font-family: Bradley Hand, cursive;
+}
+form {
+    margin-top: 12px;
+}
+#chat-messages li {
+    padding: 12px;
+}
+#ChanelName{
+    font-size: 25px;
+    font-style: italic;
+    color:grey;
+}
+#TitleSite{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.button{
+    background-color:#23d160;
+    color:white;
+}
+
+.button:hover{
+    color:white;
+}
+
+#ChatList, #typing{
+    color:grey;
+}
+
+#channels input{
+    width: 150px;
+}

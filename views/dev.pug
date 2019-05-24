@@ -1,0 +1,55 @@
+
+doctype html
+html
+  head
+    title Chat Application avec NodeJs
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://code.jquery.com/jquery-3.4.1.js')
+    
+  body
+    #chat-app
+      #chat.has-text-centered
+        section.hero.is-success
+          .hero-body
+            .container
+              h1.title NodeChat
+              h2.Title Application de chat avec Node.js et socket.io
+              hr
+              h3.Title Bienvenue sur la chaîne Développement
+              br
+              navbar
+                a(class='button' href='./') Chaîne Générale               
+                a(class='button' href='./graph') Chaîne Graphisme
+                
+        section
+          .aside.col-md-2.bg-secondary.text-light
+             .sidebar-sticky
+                br
+                h2 Contributeurs au chat :            
+                  ul#User-list
+                    li Aucun
+        section.section.chat-container             
+          .container
+            .columns
+              .box.column.is-8.is-offset-2
+                h2.title Chaîne Générale
+                p#typing 
+                .chat-messages.has-text-left                  
+                  ul#chat-messages
+                form
+                  .field.has-addons
+                    p.control
+                      input(type='text', class='input', value='Patrick Chirac', id='name')
+                    p.control.is-expanded
+                      input(type='text', class='input', placeholder='Try to say something', id='message')
+                    p.control
+                      input(type='submit', class='button is-warning', value='Post')
+        footer
+          .container
+            .content
+              p                       
+              script(src="/socket.io/socket.io.js")
+              script(src="/scripts/client.js" type="module")
+              
